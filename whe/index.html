@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skyline Weather</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="weather-app">
+        <header class="app-header">
+            <div>
+                <p class="eyebrow">LIVE WEATHER</p>
+                <h1>Skyline Weather</h1>
+                <p class="subtitle">A clear look at what is happening outside.</p>
+            </div>
+            <div class="status-dot" aria-label="Weather service online"></div>
+        </header>
+
+        <form id="searchForm" class="search-bar">
+            <label class="sr-only" for="cityInput">Search for a city</label>
+            <input id="cityInput" type="search" placeholder="Search a city..." value="Puducherry" required>
+            <button type="submit">Search</button>
+        </form>
+
+        <section id="weatherData" class="weather-panel" aria-live="polite">
+            <div class="empty-state">
+                <span class="empty-icon">+</span>
+                <h2>Find your weather</h2>
+                <p>Search for any city to see current conditions.</p>
+            </div>
+        </section>
+
+        <footer class="app-footer">
+            <span>Powered by OpenWeather</span>
+            <span id="updatedAt">Ready to search</span>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
